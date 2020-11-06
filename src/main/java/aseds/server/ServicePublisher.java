@@ -4,11 +4,12 @@ package aseds.server;
 import javax.xml.ws.Endpoint;
 import org.slf4j.LoggerFactory;
 import aseds.webservices.ProductsManagerImpl;
+import org.slf4j.Logger;
 
 public class ServicePublisher {
   
 	
-	private static org.slf4j.Logger logger = LoggerFactory.getLogger(ServicePublisher.class);
+	private static Logger logger = LoggerFactory.getLogger(ServicePublisher.class);
 	 
 	public static void main(String[] args) {
 		logger.info("Démarrage du serveur");
