@@ -22,6 +22,12 @@ public class Products {
 	public Products() {
 		this.products = new ArrayList<Product>();
 	}
+	
+	public long add(Product product ) {
+		products.add(product);
+		
+		return product.getId();
+	}
 	// hada tahowa hhhhhhh
 	public Products(List<Product> products) {
 		this.products = products;
