@@ -8,7 +8,7 @@ import aseds.domain.Product;
 import aseds.domain.Products;
 import aseds.exceptions.NoSuchProductException;
 
-@WebService(endpointInterface = "aseds.webservices.ProductManager")
+@WebService(endpointInterface = "aseds.webservices.ProductsManager")
 
 public class ProductsManagerImpl implements ProductsManager {
 	private static  Products products = new Products(new ArrayList<Product>());
