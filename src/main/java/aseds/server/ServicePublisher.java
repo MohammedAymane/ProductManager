@@ -1,7 +1,6 @@
 package aseds.server;
 
 import aseds.webservices.ProductsManagerImpl;
-import aseds.webservices.ProductsManager;
 import javax.xml.ws.Endpoint;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;

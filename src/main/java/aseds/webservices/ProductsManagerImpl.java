@@ -13,31 +13,44 @@ import aseds.exceptions.NoSuchProductException;
 public class ProductsManagerImpl implements ProductsManager {
 	private static  Products products = new Products(new ArrayList<Product>());
 
-	@Override
+	
 	public long addProduct(Product product)  {
 		long k = products.add(product);
 		return k;
 	}
 
-	@Override
+	
 	public Product getProduct(long id) throws NoSuchProductException {
+	
 		Product pr = products.get(id);
-		return pr;
+		if (pr !=null) {
+			return pr;
+		}
+		else {
+			throw new NoSuchProductException("No such product");
+		}
+		
 	}
 
-	@Override
+	
 	public double getProductPrice(long id) throws NoSuchProductException {
-		double px = products.get(id).getPrice();
-		return px;
+		Product pr = products.get(id);
+		if (pr !=null) {
+			return pr.getPrice();
+		}
+		else {
+			throw new NoSuchProductException("No such product");
+		}
+		
 	}
 
-	@Override
+	
 	public Products getProducts() {
 		
 		return products;
 	}
 
-	@Override
+	
 	public Product updateProduct(Product product) throws NoSuchProductException{
 		products.remove(product.getId());
 		products.add(product);
@@ -45,13 +58,13 @@ public class ProductsManagerImpl implements ProductsManager {
 		return product;
 	}
 
-	@Override
+	
 	public boolean deleteProduct(long id) throws NoSuchProductException {
 		boolean isDeleted  = products.remove(id);
 		return isDeleted;
 	}
 
-	@Override
+	
 	public boolean deleteAllProducts() {
 		boolean isAllDeleted = products.removeAll();
 		return isAllDeleted;

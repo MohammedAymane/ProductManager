@@ -23,7 +23,11 @@
     <version>2.3.1</version>
 </dependency>
 
-		
+		    <dependency>
+        <groupId>com.sun.net.httpserver</groupId>
+        <artifactId>http</artifactId>
+        <version>20070405</version>
+    </dependency>
 		
 
 		<dependency>
@@ -33,19 +37,5 @@
 		</dependency>
 			
   </dependencies>
-   <build>
-  <pluginManagement>
-   <plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>          
-        <configuration>
-            <source>1.6</source>
-            <target>1.6</target>
-        </configuration>
-    </plugin>
-   </plugins>
-  </pluginManagement>
- </build>
   
 </project>
