@@ -18,7 +18,7 @@ public class Product {
 		this.label="Product X";
 		this.price=0;
 	}
-	public Product(Long id,String label, double price) {
+	public Product(long id,String label, double price) {
 
 		this.id=id;
 		this.label=label;
